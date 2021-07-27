@@ -1,9 +1,6 @@
-# PlasticNet
-PlasticNet
-
+# Plastic-Net Trash Detection (an IBM Space Tech project)
 
 PlasticNet is part of "IBM Tech for Good" to build a repo of AI models to classify types, brands of plastics, trash on beaches in ocean etc. We can scale this effort with the global community of developers participating and contributing towards this noble effort, helping on Ocean Cleanup, which can also help on the Climate Change.
-# Plastic-Net Trash Detection (an IBM Space Tech project)
 
 ## Goals
 
