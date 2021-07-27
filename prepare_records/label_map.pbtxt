@@ -1,0 +1,28 @@
+item {
+  name: "plastic-bag"
+  id: 1
+}
+item {
+  name: "plastic-bottle"
+  id: 2
+}
+item {
+  name: "potato-chip-bag"
+  id: 3
+}
+item {
+  name: "plastic-jug"
+  id: 4
+}
+item {
+  name: "styrafoam"
+  id: 5
+}
+item {
+  name: "metal-can"
+  id: 6
+}
+item {
+  name: "soda-can-metal"
+  id: 7
+}
