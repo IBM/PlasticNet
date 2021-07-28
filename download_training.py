@@ -29,23 +29,3 @@ def download_checkpoint(model):
   tar.close()
 
   os.remove(model)
-
-
-"""
-  # Extract all the `model.ckpt` files.
-  with tarfile.open(model) as tar:
-    for member in tar.getmembers():
-      member.name = os.path.basename(member.name)
-      if 'model.ckpt' in member.name:
-        tar.extract(member, path=output)
-"""
-
-"""
-def download_config(model_config, output):
-  download_base = 'https://raw.githubusercontent.com/tensorflow/models/master/research/object_detection/configs/tf2/'
-
-  # Download the config
-  opener = urllib.request.URLopener()
-  opener.retrieve(download_base + model_config, model_config)
-
-"""
