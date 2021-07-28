@@ -1,0 +1,16 @@
+models/
+test_model/images
+test_model/videos
+checkpoint/
+detections/
+*.config
+*.tar.gz
+prepare_records/images
+test_model/detections/*
+!test_model/detections/.gitkeep
+test_model/images/*
+!test_model/images/.gitkeep
+test_model/videos/*
+!test_model/videos/.gitkeep
+darknet/
+out/
