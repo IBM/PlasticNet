@@ -20,6 +20,52 @@ Faster RCNN v2 PlasticNet Demo:
 
 See our (in-progress) demo here: https://docs.google.com/presentation/d/1D04HwL_vGas8BhgN-ztyltyDpgY5WQ-SIR7O7K86HQ8/edit?usp=sharing
 
+## Get Started
+
+To get started with PlasticNet, you first must clone the repository using the following command:
+
+```
+git clone https://github.com/IBM/PlasticNet.git
+```
+
+Once the repository is cloned, you can run the following command in the python evironment of your choice. (NOTE: It is recommended that this is done in a new python environment, to avoid any issues between package dependencies)
+
+The setup script currently only supports MacOS, but Windows and Linux support will be added soon.
+```
+cd PlasticNet && python setup.py
+```
+
+Once the setup script has finished running, you should restart your terminal session and run the following command:
+
+```
+PlasticNet
+```
+
+This will open the PlasticNet terminal, so you can easily download our models from our model zoo, test the models on videos, webcam, and images, or train on top of an existing model.
+
+A list of all commands can be found by typing `help`, and more detailed instructions about aguments for any command can be found with `help [command name]`.
+
+To exit the command line, type `quit`. 
+
+## Using YOLO Models
+
+If you intend to train YOLO Models, you, may have to make some changes to the Makefile depending on your system. The Makefile is located in ./darknet, and you will want to update these parameters to whatver your system has, 1 meaning enabled.
+
+```
+GPU=1
+CUDNN=0
+CUDNN_HALF=0
+OPENCV=1
+AVX=0
+OPENMP=0
+LIBSO=0
+```
+It is highly recommended you install CUDNN & OpenCV for use with Darknet, as it will expedite the training process. 
+
+You can additionally update the `yolo-obj.cfg` file (located in /darknet/cfg/) with any parameters you choose, specifically the number of iterations, classes, and filters. A guide for what these values should be set to can be found here: [https://github.com/mattokc35/darknet#how-to-train-to-detect-your-custom-objects](https://github.com/mattokc35/darknet#how-to-train-to-detect-your-custom-objects)
+
+After you have updated this makefile and/or the configuration file, run `make clean` and `make` to be able to start darknet training with the PlasticNet CLI.
+
 
 ## Test Results
 
