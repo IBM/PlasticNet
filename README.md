@@ -6,12 +6,7 @@ PlasticNet is part of "IBM Tech for Good" to build a repo of AI models to classi
 
 
 OCEAN PLASTIC STATISTICS:
-<<<<<<< HEAD
 More than 1 million seabirds and 100,000 marine animals die from plastic pollution every year
-=======
-
-More than 1 million seabirds and 100,000 marine animals die from plastic pollution every year.
->>>>>>> 6c3adf0e8b5e09aa04d2bac3557a91127ac81b2a
 
 100% of baby sea turtles have plastic in their stomachs.
 
@@ -51,10 +46,6 @@ By 2020 the number of plastics in the sea will be higher than the number of fish
 
 Plastic microbeads are estimated to be one million times more toxic than the seawater around it.
 
-<<<<<<< HEAD
 Products containing microbeads can release 100,000 tiny beads with just one squeeze
-=======
-Products containing microbeads can release 100,000 tiny beads with just one squeeze.
->>>>>>> 6c3adf0e8b5e09aa04d2bac3557a91127ac81b2a
 
 Source: https://www.condorferries.co.uk/plastic-in-the-ocean-statistics
