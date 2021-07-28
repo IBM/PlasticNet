@@ -7,6 +7,7 @@ PlasticNet is part of "IBM Tech for Good" to build a repo of AI models to classi
 
 OCEAN PLASTIC STATISTICS:
 More than 1 million seabirds and 100,000 marine animals die from plastic pollution every year.
+
 100% of baby sea turtles have plastic in their stomachs.
 There is now 5.25 trillion macro and micro pieces of plastic in our ocean & 46,000 pieces in every square mile of ocean, weighing up to 269,000 tonnes.
 Every day around 8 million pieces of plastic makes their way into our oceans.
