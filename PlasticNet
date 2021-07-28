@@ -71,7 +71,7 @@ class MyPrompt(Cmd):
         print("EXPORTING MODEL: " + str(model))
         os.chdir(self.currentPath)
         os.chdir('models/research/object_detection')
-        os.system("python exporter_main_v2.py --input_type image_tensor --pipeline_config_path" + 
+        os.system("python exporter_main_v2.py --input_type image_tensor --pipeline_config_path " + 
         "../../../training/pipeline.config --trained_checkpoint_dir ../../../out/" + model + " " +
         "--output_directory ../../../out/" + model + "/exported_model")
         os.chdir('../../../')
@@ -105,7 +105,7 @@ class MyPrompt(Cmd):
                     current_path = os.getcwd()
                     print(current_path)
                 else:
-                    print("ERROR: Invalid syntax. Use test_model help for help.")
+                    print("ERROR: Invalid syntax. Use help test_model for help.")
                     return
             elif(mode == 'i'):
                 score = args[1]
