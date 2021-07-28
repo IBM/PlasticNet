@@ -1,5 +1,7 @@
 # Plastic-Net Trash Detection (an IBM Space Tech project)
 
+PlasticNet is part of "IBM Tech for Good" to build a repo of AI models to classify types, brands of plastics, trash on beaches in ocean etc. We can scale this effort with the global community of developers participating and contributing towards this noble effort, helping on Ocean Cleanup, which can also help on the Climate Change.
+
 ## Goals
 
 The **Goals** for our project are listed below as the following: 
@@ -42,29 +44,48 @@ Forked YOLOv4 Darknet repository: https://github.com/mattokc35/darknet
 
 
 
+OCEAN PLASTIC STATISTICS:
 
-# Custom Tensorflow Pipeline for Plastic-Net
+More than 1 million seabirds and 100,000 marine animals die from plastic pollution every year.
 
-## Try out our Plastic-Net Shell program! (environment to setup and train different Plastic-Net models)
+100% of baby sea turtles have plastic in their stomachs.
 
-Run our setup script:
-```
-python setup.py
+There is now 5.25 trillion macro and micro pieces of plastic in our ocean & 46,000 pieces in every square mile of ocean, weighing up to 269,000 tonnes.
 
-```
+Every day around 8 million pieces of plastic makes their way into our oceans.
 
-After running the setup script, close your current terminal window and open a new one. Then, you should be able to run our cmd executable from anywhere:
-```
-PlasticNet
-```
+The Great Pacific Garbage Patch is around 1.6 million square kilometers – bigger than Texas.
 
-## Use
+The world produces 381 million tonnes in plastic waste yearly – this is set to double by 2034.
 
-To begin creating a model, run the file `prepare_training.py` with the flags of the `model_name` and `model_config_name`. For example, 
-```bash
- python prepare_training.py --model_name efficientdet_d0_coco17_tpu-32.tar.gz --model_config_name ssd_efficientdet_d0_512x512_coco17_tpu-8.config
-```
-This downloads the correct model and config file from the tensorflow model zoo, provided the names.
+50% of this is single-use plastic & only 9% has ever been recycled.
 
-Trained models will be saved in the 'out' directory. Test files are automatically configured to use this directory, and you can specify which model you want to test using command line arguments. 
+Over 2 million tonnes of plastic packaging are used in the UK each year.
 
+88% of the sea's surface is polluted by plastic waste.
+
+Between 8 to 14 million tonnes enters our ocean every year.
+
+Britain contributes an estimated 1.7 million tonnes of plastic annually.
+
+The US contributes 38 million tonnes of plastic every year.
+
+Plastic packaging is the biggest culprit, resulting in 80 million tonnes of waste yearly from the US alone.
+
+On UK beaches there are 5000 pieces of plastic & 150 plastic bottles for each mile.
+
+More than 1 million plastic bags end up in the trash every minute.
+
+The world uses over 500 billion plastic bags a year – that’s 150 for each person on Earth.
+
+8.3 billion plastic straws pollute the world’s beaches, but only 1% of straws end up as waste in the ocean.
+
+By 2020 the number of plastics in the sea will be higher than the number of fish.
+
+1 in 3 fish caught for human consumption contains plastic.
+
+Plastic microbeads are estimated to be one million times more toxic than the seawater around it.
+
+Products containing microbeads can release 100,000 tiny beads with just one squeeze.
+
+Source: https://www.condorferries.co.uk/plastic-in-the-ocean-statistics
