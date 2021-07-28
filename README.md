@@ -12,9 +12,12 @@ The **Goals** for our project are listed below as the following:
 
 ## Demo of Object Detection
 
+Faster RCNN v2 PlasticNet Demo:
+
+[![PlasticNet Demo](https://i.ytimg.com/vi/Ym2tUIaf_LY/maxresdefault.jpg)](https://youtu.be/Ym2tUIaf_LY "PlasticNet Demo")
+
 See our (in-progress) demo here: https://docs.google.com/presentation/d/1D04HwL_vGas8BhgN-ztyltyDpgY5WQ-SIR7O7K86HQ8/edit?usp=sharing
 
-![video](fasterrcnndemo.mp4)
 
 ## Test Results
 
