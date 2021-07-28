@@ -6,6 +6,7 @@ PlasticNet is part of "IBM Tech for Good" to build a repo of AI models to classi
 
 
 OCEAN PLASTIC STATISTICS:
+
 More than 1 million seabirds and 100,000 marine animals die from plastic pollution every year.
 
 100% of baby sea turtles have plastic in their stomachs.
