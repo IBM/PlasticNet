@@ -46,6 +46,6 @@ By 2020 the number of plastics in the sea will be higher than the number of fish
 
 Plastic microbeads are estimated to be one million times more toxic than the seawater around it.
 
-Products containing microbeads can release 100,000 tiny beads with just one squeeze.
+Products containing microbeads can release 100,000 tiny beads with just one squeeze
 
 Source: https://www.condorferries.co.uk/plastic-in-the-ocean-statistics
