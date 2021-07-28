@@ -18,8 +18,8 @@ import tarfile
 import six.moves.urllib as urllib
 
 def download_checkpoint(model):
-  # for tensorflow 2 model zoo
-  download_base = 'http://download.tensorflow.org/models/object_detection/tf2/20200711/'
+  # For PlasticNet Model Zoo
+  download_base = 'https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/'
   # Download the checkpoint
   opener = urllib.request.URLopener()
   opener.retrieve(download_base + model + '.tar.gz', model)
