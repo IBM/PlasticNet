@@ -14,6 +14,8 @@ The **Goals** for our project are listed below as the following:
 
 See our (in-progress) demo here: https://docs.google.com/presentation/d/1D04HwL_vGas8BhgN-ztyltyDpgY5WQ-SIR7O7K86HQ8/edit?usp=sharing
 
+![video](fasterrcnndemo.mp4)
+
 ## Test Results
 
 See our spreadsheet documentating our test results from different trained models here: https://docs.google.com/spreadsheets/d/1mcFC2HqjohRp2_G723D8_Xd19LuuUKD-frROiY5ksOQ/edit?usp=sharing
