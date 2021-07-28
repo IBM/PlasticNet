@@ -16,3 +16,4 @@ test_model/images/*
 test_model/videos/*
 !test_model/videos/.gitkeep
 out/
+.DS_Store
