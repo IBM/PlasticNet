@@ -11,7 +11,9 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-import os, sys
+import os, sys, platform
+
+os_name = platform.system()
 
 # Install required dependencies
 os.system("pip install -r requirements.txt")
@@ -44,26 +46,32 @@ print(str(current_dir) + "/models")
 os.chdir("../../")
 
 
-# Convert command line client file into an executable
-current_path = os.getcwd()
-print(current_path)
-os.system("cp PlasticNet.py PlasticNetCopy.py")
-os.system("chmod +x PlasticNetCopy.py")
-os.system("mv PlasticNetCopy.py PlasticNet")
+if (os_name == 'Darwin' or os_name == "Linux"): #Mac or Linux
+    # Convert command line client file into an executable
+    current_path = os.getcwd()
+    print(current_path)
+    os.system("cp PlasticNet.py PlasticNetCopy.py")
+    os.system("chmod +x PlasticNetCopy.py")
+    os.system("mv PlasticNetCopy.py PlasticNet")
 
-#permanently add PlasticNet to your bin $PATH
-os.system('mkdir -p ~/bin')
-os.system('cp PlasticNet ~/bin')
+    #permanently add PlasticNet to your bin $PATH
+    os.system('mkdir -p ~/bin')
+    os.system('cp PlasticNet ~/bin')
 
-### WORKING FOR MACOS
-file_read = open(os.path.expanduser("~") + '/.zshrc', 'r+')
-readfile = file_read.read()
-if not 'PATH=$PATH":$HOME/bin"' in readfile:
-    file = open(os.path.expanduser("~") + '/.zshrc', 'a')
-    file.write('\nexport PATH=$PATH\":$HOME/bin\"')
+    ### WORKING FOR MACOS
+    file_read = open(os.path.expanduser("~") + '/.zshrc', 'r+')
+    readfile = file_read.read()
+    if not 'PATH=$PATH":$HOME/bin"' in readfile:
+        file = open(os.path.expanduser("~") + '/.zshrc', 'a')
+        file.write('\nexport PATH=$PATH\":$HOME/bin\"')
 
-print("********************************")
-print("SUCCESS!!!!!")
-print("Dependencies installed. Please restart your terminal session and type PlasticNet from any location to run")
-print("********************************")
+    print("********************************")
+    print("SUCCESS!!!!!")
+    print("Dependencies installed. Please restart your terminal session and type PlasticNet from any location to run")
+    print("********************************")
 
+if (os_name != 'Darwin'):
+    print("********************************")
+    print("SUCCESS!!!!!")
+    print("Dependencies installed. Please run python PlasticNet.py to use the CLI.")
+    print("********************************")
