@@ -18,8 +18,8 @@ import tarfile
 import six.moves.urllib as urllib
 
 def download_checkpoint(model):
-  # for tensorflow 2 model zoo
-  download_base = 'http://download.tensorflow.org/models/object_detection/tf2/20200711/'
+  # For PlasticNet Model Zoo
+  download_base = 'https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/'
   # Download the checkpoint
   opener = urllib.request.URLopener()
   opener.retrieve(download_base + model + '.tar.gz', model)
@@ -29,23 +29,3 @@ def download_checkpoint(model):
   tar.close()
 
   os.remove(model)
-
-
-"""
-  # Extract all the `model.ckpt` files.
-  with tarfile.open(model) as tar:
-    for member in tar.getmembers():
-      member.name = os.path.basename(member.name)
-      if 'model.ckpt' in member.name:
-        tar.extract(member, path=output)
-"""
-
-"""
-def download_config(model_config, output):
-  download_base = 'https://raw.githubusercontent.com/tensorflow/models/master/research/object_detection/configs/tf2/'
-
-  # Download the config
-  opener = urllib.request.URLopener()
-  opener.retrieve(download_base + model_config, model_config)
-
-"""
