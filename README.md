@@ -14,9 +14,13 @@ The **Goals** for our project are listed below as the following:
 
 ## Demo of Object Detection
 
-Faster RCNN v2 PlasticNet Demo:
+YOLOv4 9 class v1 PlasticNet Demo:
 (Click to watch)
-[![PlasticNet Demo](https://i.ytimg.com/vi/Ym2tUIaf_LY/maxresdefault.jpg)](https://youtu.be/Ym2tUIaf_LY "PlasticNet Demo")
+[![PlasticNet Demo](https://i.ytimg.com/vi/CI_YbuXCGAc/maxresdefault.jpg)](https://youtu.be/CI_YbuXCGAc "YOLO PlasticNet Demo")
+
+Tensorflow Faster RCNN v2 7 class PlasticNet Demo:
+(Click to watch)
+[![PlasticNet Demo](https://i.ytimg.com/vi/Ym2tUIaf_LY/maxresdefault.jpg)](https://youtu.be/Ym2tUIaf_LY "Tensorflow PlasticNet Demo")
 
 See our (in-progress) demo here: https://docs.google.com/presentation/d/1D04HwL_vGas8BhgN-ztyltyDpgY5WQ-SIR7O7K86HQ8/edit?usp=sharing
 
