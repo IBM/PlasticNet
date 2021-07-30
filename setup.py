@@ -46,7 +46,7 @@ print(str(current_dir) + "/models")
 os.chdir("../../")
 
 
-if (os_name == 'Darwin' or os_name == "Linux"): #Mac or Linux
+if (os_name == 'Darwin'): #Mac
     # Convert command line client file into an executable
     current_path = os.getcwd()
     print(current_path)
