@@ -12,12 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import glob, os, shutil
+
+### NOTE: IF YOU HAVE MULTIPLE FILE TYPES, YOU WILL HAVE TO RUN THIS SCRIPT ONCE FOR EACH FILE TYPE AND CHANGE THE EXTENSION
+
 # Current directory
 current_dir = os.path.dirname(os.path.abspath(__file__))
 # Percentage of images to be used for the test set
 percentage_test = 20
 counter=1
-current_dir = os.path.join(current_dir, "images")
+current_dir = os.path.join(current_dir, "images/")
 if not os.path.isdir(os.path.join(current_dir, "train")): 
     os.mkdir(os.path.join(current_dir, "train"))
     os.mkdir(os.path.join(current_dir, "test"))
