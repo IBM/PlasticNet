@@ -8,6 +8,7 @@
 * [PlasticNet Resnet 640x640](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/plasticnet_resnet_640x640_v2.tar.gz)
 
 ## YOLO Models
+* [PlasticNet YOLO 9Class 480x480 v2](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/yolo9classv2iter27000weights.tar.gz)
 * [PlasticNet YOLO 9Class 480x480 v1](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/yolo9class480x480weights.tar.gz)
 * [PlasticNet YOLO 7Class 576x576](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/yolo7class576x576weights.tar.gz)
 * [PlasticNet YOLO 7Classv2 416x416](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/7classyoloV2weights.tar.gz)
