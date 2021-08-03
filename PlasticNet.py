@@ -70,7 +70,7 @@ class MyPrompt(Cmd):
         elif (len(args) == 1):
             model = args[0]
             num_classes = 9 # default
-            print("PREPARING TRAINING FOR MODEL: " + str(self.currentModel))
+            print("PREPARING TRAINING FOR MODEL: " + str(model))
         else:
             print("ERROR: Invalid syntax. Use help prepare_training for help.")
             return
