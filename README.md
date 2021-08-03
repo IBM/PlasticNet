@@ -25,6 +25,10 @@ Tensorflow Faster RCNN v3 7 class PlasticNet Transfer Learning Demo:
 
 See our (in-progress) demo here: https://docs.google.com/presentation/d/1D04HwL_vGas8BhgN-ztyltyDpgY5WQ-SIR7O7K86HQ8/edit?usp=sharing
 
+## Project Architecture
+
+![img](/img/plasticnetdiagram.png)
+
 ## Get Started
 
 To get started with PlasticNet, you first must clone the repository using the following command:
