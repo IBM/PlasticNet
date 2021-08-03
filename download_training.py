@@ -14,6 +14,7 @@
 
 import os
 import tarfile
+import sys
 
 import six.moves.urllib as urllib
 
@@ -29,3 +30,7 @@ def download_checkpoint(model):
   tar.close()
 
   os.remove(model)
+
+if __name__ == '__main__':
+  print(sys.argv[1])
+  download_checkpoint(sys.argv[1])
