@@ -13,6 +13,10 @@ The **Goals** for our project are listed below as the following:
 * To provide a set of pretrained **PlasticNet** models that can be utilized for future development and improvement via transfer learning
 * Implement our models to work on real-time satellite and camera footage
 
+## Project Architecture
+
+![img](/img/plasticnetdiagram.png)
+
 ## Demo of Object Detection
 
 YOLOv4 9 class v2 PlasticNet Demo:
@@ -25,9 +29,6 @@ Tensorflow Faster RCNN v3 7 class PlasticNet Transfer Learning Demo:
 
 See our (in-progress) demo here: https://docs.google.com/presentation/d/1D04HwL_vGas8BhgN-ztyltyDpgY5WQ-SIR7O7K86HQ8/edit?usp=sharing
 
-## Project Architecture
-
-![img](/img/plasticnetdiagram.png)
 
 ## Get Started
 
