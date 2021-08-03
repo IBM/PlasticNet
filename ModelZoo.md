@@ -28,13 +28,12 @@
                 
                 ‘total_loss’: 0.088
 
-* [PlasticNet FasterRCNN 7 Classes 640x640](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/plasticnet_rcnn_640x640_v2.tar.gz)
+* [PlasticNet FasterRCNN 7 Classes 640x640 v2](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/plasticnet_faster_rcnn_640x640_7classes_v2.tar.gz)
    
-   
+   Model File Name: plasticnet_faster_rcnn_640x640_7classes_v2
    
    Average Loss: 
-
-                 
+   
                  ‘classification_loss’: 0.1095
 
                  ‘localization_loss’: 0.3035
@@ -43,7 +42,21 @@
 
                  ‘regularization_loss’: 0.0,
 
-                 ‘total_loss’: 0.4964,
+                 ‘total_loss’: 0.4964
+                
+* [PlasticNet FasterRCNN 7 Classes 640x640 v1](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/plasticnet_faster_rcnn_640x640_7classes_v1.tar.gz)
+   
+   Model File Name: plasticnet_faster_rcnn_640x640_7classes_v1
+   
+   Average Loss: 
+   
+                 classification loss is 0.006, 
+                 
+                 localization loss is 0.0024, 
+                 
+                 regularization loss is 0.00, 
+                 
+                 total loss is 0.0224
 
 * [PlasticNet SSD-Resnet 7 Classes 640x640](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/plasticnet_ssd_resnet_640x640_7classes_v1.tar.gz)
 
@@ -82,11 +95,11 @@
 
 * [PlasticNet YOLO 4 Classes v2 416x416](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/yolo4classesupdatedweights.tar.gz)
 
-   Average Loss: 
+   Average Loss: N/A
 
 * [PlasticNet YOLO 4 Classes v1 8000 iterations 416x416](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/4class8000iteration.tar.gz)
 
-   Average Loss: 
+   Average Loss: N/A
 
 * [PlasticNet YOLO 2 Classes Image Augmentation 416x416](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/yolo2classes-imguag.tar.gz)
 
