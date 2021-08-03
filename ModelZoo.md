@@ -1,7 +1,9 @@
 ## PlasticNet Model Metrics 
 
 ### TensorFlow Models
-* [PlasticNet Faster-RCNN **9 classes** 640x640](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/fasterrcnn7v3.tar.gz)
+* [PlasticNet Faster-RCNN **9 classes** 640x640](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/faster_rcnn_640x640_9classes_v1.tar.gz)
+
+   Model File Name: faster_rcnn_640x640_9classes_v1
 
    Average Loss:
                  
@@ -16,21 +18,9 @@
                 total_loss’: 0.63053286,
           
 
-* [PlasticNet EfficientDET D0 7 classes 512x512](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/plasticnet_efficientdetd0_512x512_v1.tar.gz)
-
-   Average Loss: 
-                
-                ‘classification_loss’: 0.0522,
-
-                ‘localization_loss’: 0.011,
- 
-                ‘regularization_loss’: 0.0246, 
-                
-                ‘total_loss’: 0.088
-
-* [PlasticNet FasterRCNN 7 Classes 640x640 v2](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/plasticnet_faster_rcnn_640x640_7classes_v2.tar.gz)
+* [PlasticNet FasterRCNN 7 Classes 640x640 v2](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/faster_rcnn_640x640_7classes_v2.tar.gz)
    
-   Model File Name: plasticnet_faster_rcnn_640x640_7classes_v2
+   Model File Name: faster_rcnn_640x640_7classes_v2
    
    Average Loss: 
    
@@ -44,9 +34,9 @@
 
                  ‘total_loss’: 0.4964
                 
-* [PlasticNet FasterRCNN 7 Classes 640x640 v1](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/plasticnet_faster_rcnn_640x640_7classes_v1.tar.gz)
+* [PlasticNet FasterRCNN 7 Classes 640x640 v1](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/faster_rcnn_640x640_7classes_v1.tar.gz)
    
-   Model File Name: plasticnet_faster_rcnn_640x640_7classes_v1
+   Model File Name: faster_rcnn_640x640_7classes_v1
    
    Average Loss: 
    
@@ -58,9 +48,9 @@
                  
                  total loss is 0.0224
 
-* [PlasticNet SSD-Resnet 7 Classes 640x640](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/plasticnet_ssd_resnet_640x640_7classes_v1.tar.gz)
+* [PlasticNet SSD-Resnet 7 Classes 640x640](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/ssd_resnet_640x640_7classes_v1.tar.gz)
 
-   Model File Name: plasticnet_ssd_resnet_640x640_7classes_v1
+   Model File Name: ssd_resnet_640x640_7classes_v1
    
    Average Loss: 
 
