@@ -25,7 +25,7 @@ def download_checkpoint(model):
   opener.retrieve(download_base + model + '.tar.gz', model)
 
   tar = tarfile.open(model)
-  tar.extractall('./checkpoint') # pipeline.config file will be included
+  tar.extractall('./out') # pipeline.config file will be included
   tar.close()
 
   os.remove(model)

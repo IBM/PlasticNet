@@ -25,6 +25,8 @@ if not os.path.isdir(os.path.join(current_dir, "train")):
     os.mkdir(os.path.join(current_dir, "train"))
     os.mkdir(os.path.join(current_dir, "test"))
 index_test = round(100 / percentage_test)
+
+# move over jpg
 for pathAndFilename in glob.iglob(os.path.join(current_dir, "*.jpg")):
     title, ext = os.path.splitext(os.path.basename(pathAndFilename))
     if counter == index_test:
@@ -36,3 +38,41 @@ for pathAndFilename in glob.iglob(os.path.join(current_dir, "*.jpg")):
         shutil.move(str(pathAndFilename)[:-3] + "xml", current_dir + "train/" + str(title) + ".xml")
         counter = counter + 1
 
+# move over png
+counter = 1
+for pathAndFilename in glob.iglob(os.path.join(current_dir, "*.png")):
+    title, ext = os.path.splitext(os.path.basename(pathAndFilename))
+    if counter == index_test:
+        counter = 1
+        shutil.move(str(pathAndFilename), current_dir + "test/" + str(title) + str(ext))
+        shutil.move(str(pathAndFilename)[:-3] + "xml", current_dir + "test/" + str(title) + ".xml")
+    else:
+        shutil.move(str(pathAndFilename), current_dir + "train/" + str(title) + str(ext))
+        shutil.move(str(pathAndFilename)[:-3] + "xml", current_dir + "train/" + str(title) + ".xml")
+        counter = counter + 1
+
+# move over jpeg
+counter = 1
+for pathAndFilename in glob.iglob(os.path.join(current_dir, "*.jpeg")):
+    title, ext = os.path.splitext(os.path.basename(pathAndFilename))
+    if counter == index_test:
+        counter = 1
+        shutil.move(str(pathAndFilename), current_dir + "test/" + str(title) + str(ext))
+        shutil.move(str(pathAndFilename)[:-4] + "xml", current_dir + "test/" + str(title) + ".xml")
+    else:
+        shutil.move(str(pathAndFilename), current_dir + "train/" + str(title) + str(ext))
+        shutil.move(str(pathAndFilename)[:-4] + "xml", current_dir + "train/" + str(title) + ".xml")
+        counter = counter + 1
+
+# move over JPG
+counter = 1
+for pathAndFilename in glob.iglob(os.path.join(current_dir, "*.JPG")):
+    title, ext = os.path.splitext(os.path.basename(pathAndFilename))
+    if counter == index_test:
+        counter = 1
+        shutil.move(str(pathAndFilename), current_dir + "test/" + str(title) + str(ext))
+        shutil.move(str(pathAndFilename)[:-3] + "xml", current_dir + "test/" + str(title) + ".xml")
+    else:
+        shutil.move(str(pathAndFilename), current_dir + "train/" + str(title) + str(ext))
+        shutil.move(str(pathAndFilename)[:-3] + "xml", current_dir + "train/" + str(title) + ".xml")
+        counter = counter + 1
