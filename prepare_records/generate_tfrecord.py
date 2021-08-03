@@ -57,6 +57,8 @@ def class_text_to_int(row_label):
         return 8
     elif row_label == 'plastic-piece':
         return 9
+    elif row_label == 'face-mask':
+        return 10
     else:
         return None
 def split(df, group):

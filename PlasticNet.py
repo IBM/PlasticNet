@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # Copyright 2021 IBM Corporation
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -11,8 +12,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-#!/usr/bin/python3
 
 from cmd import Cmd
 import sys
@@ -69,9 +68,9 @@ class MyPrompt(Cmd):
             num_classes = args[1]
             print("PREPARING TRAINING FOR MODEL: " + str(model))
         elif (len(args) == 1):
-            model = ""
-            num_classes = 7 # default
-            print("PREPARING TRAINING FOR MODEL: " + str(self.currentModel))
+            model = args[0]
+            num_classes = 9 # default
+            print("PREPARING TRAINING FOR MODEL: " + str(model))
         else:
             print("ERROR: Invalid syntax. Use help prepare_training for help.")
             return
@@ -186,7 +185,7 @@ class MyPrompt(Cmd):
         """
         Function generates both train.record and test.record for your tensorflow model, make sure your train_labels.csv is saved in images, and your images directories for train and test are saved as \'train\' and \'test\' in the images directory.
         """
-        current_path = os.getcwd()
+        current_path = str(self.currentPath)
         os.chdir(current_path + '/prepare_records/')
         # Partition the dataset
         os.system("python  " + self.currentPath  + "/prepare_records/partition_dataset.py")
