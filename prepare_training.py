@@ -18,6 +18,7 @@ import json
 from download_training import download_checkpoint
 from override_pipeline import override_pipeline
 from absl import app, flags
+import subprocess
 
 flags.DEFINE_string('model_name', None, 'Title of model')
 flags.DEFINE_string('model_config_name', None, 'Model config name')
@@ -32,11 +33,11 @@ def main(argv):
   """
   MODEL_CHECKPOINT = FLAGS.model_name
   NUM_CLASSES = FLAGS.num_classes
-  DIR_PATH = os.path.abspath(os.getcwd())
+  DIR_PATH = os.getcwd()
   train_record_path = DIR_PATH + '/prepare_records/train.record'
   val_record_path = DIR_PATH + '/prepare_records/test.record'
-  checkpoint_path = DIR_PATH + '/checkpoint/' +  MODEL_CHECKPOINT + '/checkpoint/ckpt-0'
-  label_map_path = DIR_PATH + '/prepare_records/label_map.pbtxt'
+  checkpoint_path = DIR_PATH + '/out/' +  MODEL_CHECKPOINT + '/checkpoint/ckpt-0'
+  label_map_path = DIR_PATH + '/out/label_map.pbtxt'
   checkpoint_type = "detection"
 
   override_dict = {

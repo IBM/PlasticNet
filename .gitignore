@@ -16,5 +16,8 @@ test_model/images/*
 test_model/videos/*
 !test_model/videos/.gitkeep
 out/
+!out/label_map.pbtxt
 .DS_Store
 __pycache__/
+hi.py
+cmd.py.zip
