@@ -148,6 +148,16 @@ class MyPrompt(Cmd):
             weightsString = model.replace('weights', '.weights')
             os.system("cp out/" + str(weightsString) + " " + str(self.currentPath) + "/darknet")
             os.system("rm out/" + str(weightsString))
+
+            #split train and test data for YOLOv4
+            os.chdir("darknet")
+            print(str(os.getcwd()))
+            os.system("python traintestsplit.py")
+            os.chdir("../")
+            
+        
+
+
         if return_code == 0: # successful
             self.currentModel = args[1]
             print(self.currentModel)
