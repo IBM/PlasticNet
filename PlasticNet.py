@@ -35,6 +35,69 @@ class MyPrompt(Cmd):
         else: 
             self.currentPath = os.path.dirname(os.path.abspath(__file__))
 
+    def do_darknet_train(self, args):
+        """
+        Trains a model using a pretrained YOLOv4 Model
+            Parameters:
+                model_name: Name of the model that was downloaded
+            Return:
+                None
+        """
+        if (len(args) >= 1):
+            self.currentModel = args[0]
+        print("TRAINING YOLOV4 MODEL: " + str(self.currentModel))
+        os.chdir("darknet")
+        os.system('./darknet detector train data/obj.data cfg/yolo-obj.cfg ' + str(self.currentModel))
+        os.chdir("../")
+    def help_darknet_train(self):
+        """
+        Help Function
+        """
+        print("syntax: darknet_train [model_name]")
+        print("trains model using pre-trained base model specified by user")
+    def do_darknet_test(self, args):
+        """
+        Tests a model using a pretrained YOLOv4 Model on either webcam, video, or images
+            Parameters:
+                video_name, score (minimum confidence threshold)
+        """
+        os.chdir("darknet")
+        args = args.split()
+        if (len(args) >= 2):
+            mode = args[0]
+            if(mode == 'w'):
+                score = args[1]
+                print("Testing YOLOv4 Darknet on webcam...")
+                os.system("./darknet detector demo data/obj.data cfg/yolo-obj.cfg " + ' -thresh ' + str(score) + " -c 0"  )
+                #webcam
+            if(mode == 'v'):
+                if (len(args == 3)):
+                    video_name = args[1]
+                    score = args[2]
+                else:
+                    print("ERROR: Invalid syntax. Use help darknet_test for help.")
+                    os.chdir("../")
+                    return 
+                print("Testing YOLOv4 Darknet on video...")
+                os.system('./darknet detector demo data/obj.data cfg/yolo-obj.cfg ' + str(self.currentModel) +  ' ./data/' + str(video_name) + ' -thresh ' + str(score))
+                #video
+            if(mode == 'i'):
+                score = args[1]
+                print("Testing YOLOv4 Darknet on images...")
+                os.system('./darknet detector test data/obj.data cfg/yolo-obj.cfg ' + str(self.currentModel) + ' -thresh ' + str(score))
+        else:
+            print("ERROR: Invalid syntax. Use help darknet_test for help.")
+            os.chdir("../")
+            return
+        os.chdir("../")
+        
+    def help_darknet_test(self):
+        """
+        Help Function
+        """
+        print("syntax: darknet_test [mode (w|v|i)] [video_name (only if \'v\' mode)] [score]")
+        print("tests YOLOv4 Darknet model on either webcam, video, or images with a specified minimum confidence threshold (score)")
+
 
     def do_set_model(self, args):
         """
