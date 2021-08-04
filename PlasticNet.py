@@ -94,10 +94,15 @@ class MyPrompt(Cmd):
         """
         Help Function
         """
-        print("syntax: prepare_training [model_name] [OPTIONAL: num_classes]")
-        print("generates all the necessary files for training to begin. After this is complete, run train_model")
-        print("syntax: prepare_training [model_type (YOLOv4 (y) or Tensorflow (t))] [model_name (tf) or yolo_weights (y)] [OPTIONAL: num_classes]")
-        print("generates all the necessary files for training to begin (for Tensorflow). For YOLOv4, downloads the specified pre-trained weights from PlasticNet Model Zoo. After this is complete, run train_model")
+        print("syntax: prepare_training [model_type (YOLOv4 (y) or Tensorflow (t))] [model_name (tf) or yolo_weights (y)] [OPTIONAL: num_classes]\n")
+        print("generates all the necessary files for training to begin (for Tensorflow). For YOLOv4, downloads the specified pre-trained weights from PlasticNet Model Zoo. After this is complete, run train_model\n")
+        print("\n")
+        print("List of available models:\n")
+        print("TensorFlow:")
+        print("faster_rcnn_640x640_9classes_v1\nfaster_rcnn_640x640_7classes_v2\nfaster_rcnn_640x640_7classes_v1\nssd_resnet_640x640_7classes_v1")
+        print("YOLO:")
+        print("yolo9classv2iter27000weights\nyolo9class480x480weights\nyolo7class576x576weights\n7classyoloV2weights\nyolo4classesimgaugweights"+
+        "\nyolo4classesupdatedweights\n4class8000iteration\nyolo2classes-imguag\nyolo2classes3000iterations\nyolov4weights")
 
 
     def do_train_model(self, args):
