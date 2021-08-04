@@ -21,7 +21,7 @@ global currentModel
 global currentPath
 class MyPrompt(Cmd):    
     
-    print(os.popen("mdfind kind:folder “PlasticNet”").read())
+    
     def __init__(self):
         """
         Constructor Function
@@ -29,11 +29,11 @@ class MyPrompt(Cmd):
         super(MyPrompt, self).__init__()
         self.currentModel = "default"
 
-        # Looks for PlasticNet folder and will open it
-        proc = subprocess.Popen(["mdfind kind:folder 'PlasticNet'",  "kind:folder 'PlasticNet'"], stdout=subprocess.PIPE, shell=True)
-        (out, err) = proc.communicate()
-        final_out = str(out).split("\\")
-        self.currentPath = final_out[0][2:]
+        # If CLI is installed, gets the path to the CLI. Otherwise, runs the path of this direct file as it was invoked directly
+        if (os.environ.get("PLASTICNET_PATH") != None):
+            self.currentPath = os.environ.get('PLASTICNET_PATH')
+        else: 
+            self.currentPath = os.path.dirname(os.path.abspath(__file__))
 
 
     def do_set_model(self, args):
@@ -60,23 +60,33 @@ class MyPrompt(Cmd):
         """
         Function generates all the necessary files for training to begin. After this is complete, run train_model.
         """
+        os.chdir(self.currentPath)
         args = args.split()
         model = ""
         num_classes = -1
-        if (len(args) == 2):
-            model = args[0]
-            num_classes = args[1]
+        if (len(args) == 3):
+            #yolo or tf
+            mode = args[0]
+            model = args[1]
+            num_classes = args[2]
             print("PREPARING TRAINING FOR MODEL: " + str(model))
-        elif (len(args) == 1):
-            model = args[0]
-            num_classes = 9 # default
+        elif (len(args) == 2):
+            mode = args[0]
+            model = args[1]
             print("PREPARING TRAINING FOR MODEL: " + str(model))
         else:
             print("ERROR: Invalid syntax. Use help prepare_training for help.")
             return
-        return_code = os.system("python " + str(self.currentPath) + "/" + "prepare_training.py --model_name " + str(model) + " --num_classes " + str(num_classes))
+        if mode == 't':
+            return_code = os.system("python prepare_training.py --arch_type " + str(mode) + " --model_name " + str(model) + " --num_classes " + str(num_classes))
+        elif mode == 'y':
+            print(self.currentPath)
+            return_code = os.system("python prepare_training.py --arch_type " + str(mode) + " --yolo_weights " + str(model) + " --num_classes " + str(num_classes))
+            weightsString = model.replace('weights', '.weights')
+            os.system("cp out/" + str(weightsString) + " " + str(self.currentPath) + "/darknet")
+            os.system("rm out/" + str(weightsString))
         if return_code == 0: # successful
-            self.currentModel = args[0]
+            self.currentModel = args[1]
             print(self.currentModel)
         else:
             print("ERROR: Prepare training has failed. Check the name of the model you've specified.")
@@ -86,14 +96,17 @@ class MyPrompt(Cmd):
         """
         print("syntax: prepare_training [model_name] [OPTIONAL: num_classes]")
         print("generates all the necessary files for training to begin. After this is complete, run train_model")
+        print("syntax: prepare_training [model_type (YOLOv4 (y) or Tensorflow (t))] [model_name (tf) or yolo_weights (y)] [OPTIONAL: num_classes]")
+        print("generates all the necessary files for training to begin (for Tensorflow). For YOLOv4, downloads the specified pre-trained weights from PlasticNet Model Zoo. After this is complete, run train_model")
 
 
     def do_train_model(self, args):
         """
         Trains model using pre-trained base model specified by user
         """
+        os.chdir(self.currentPath)
         print("TRAINING MODEL: " + str(self.currentModel))
-        os.system("python " + self.currentPath + "/" + "train_model.py --pipeline_config_path=training/pipeline.config/ " +
+        os.system("python train_model.py --pipeline_config_path=training/pipeline.config/ " +
         "--model_dir=out/" + str(self.currentModel))
     def help_train_model(self):
         """
@@ -107,6 +120,7 @@ class MyPrompt(Cmd):
         """
         Function exports a model after training. Specify the same model name as you used for training
         """
+        os.chdir(self.currentPath)
         args = args.split()
         if (len(args) == 1):
             model = args[0]
@@ -130,6 +144,7 @@ class MyPrompt(Cmd):
         """
         Function tests model on either webcam (w), video (v), or a directory of images (i).
         """
+        os.chdir(self.currentPath)
         args = args.split()
         if (len(args) >= 1):
             mode = args[0]
@@ -139,7 +154,7 @@ class MyPrompt(Cmd):
                 current_path = self.currentPath
                 os.chdir(current_path + '/test_model')
                 current_path = os.getcwd()
-                os.system("python " + self.currentPath + "/test_model/" + "testTensorWebcam.py --trained_model " + str(self.currentModel) + " --score " + str(score))
+                os.system("python " + "/test_model/" + "testTensorWebcam.py --trained_model " + str(self.currentModel) + " --score " + str(score))
                 os.chdir('../')
                 current_path = os.getcwd()
                 print(current_path)
@@ -151,7 +166,7 @@ class MyPrompt(Cmd):
                     current_path = self.currentPath
                     os.chdir(current_path + '/test_model')
                     current_path = os.getcwd()
-                    os.system("python " + self.currentPath + "/test_model/" + "testTensorVideo.py --video_name " + str(videoName) + " --trained_model " + str(self.currentModel) + " --score " + str(score))
+                    os.system("python " +  "/test_model/" + "testTensorVideo.py --video_name " + str(videoName) + " --trained_model " + str(self.currentModel) + " --score " + str(score))
                     os.chdir('../')
                     current_path = os.getcwd()
                     print(current_path)
@@ -164,7 +179,7 @@ class MyPrompt(Cmd):
                 current_path = self.currentPath
                 os.chdir(current_path + '/test_model')
                 current_path = os.getcwd()
-                os.system("python " + self.currentPath + "/test_model/" + "testTensorflow.py --trained_model" + str(self.currentModel) + " --score " + str(score))
+                os.system("python " + "/test_model/" + "testTensorflow.py --trained_model" + str(self.currentModel) + " --score " + str(score))
                 os.chdir('../')
                 current_path = os.getcwd()
                 print(current_path)
@@ -188,13 +203,13 @@ class MyPrompt(Cmd):
         current_path = str(self.currentPath)
         os.chdir(current_path + '/prepare_records/')
         # Partition the dataset
-        os.system("python  " + self.currentPath  + "/prepare_records/partition_dataset.py")
+        os.system("python partition_dataset.py")
         # Create test_labels.csv and train_labels.csv
-        os.system("python  " + self.currentPath  + "/prepare_records/xml_to_csv.py")
+        os.system("python xml_to_csv.py")
         #generate for train data
-        os.system("python " + self.currentPath + "/prepare_records/" + "generate_tfrecord.py --csv_input=images/train_labels.csv  --output_path=train.record --image_dir=images/train")
+        os.system("python generate_tfrecord.py --csv_input=images/train_labels.csv  --output_path=train.record --image_dir=images/train")
         #generate for test data
-        os.system("python " + self.currentPath + "/prepare_records/" +  "generate_tfrecord.py --csv_input=images/test_labels.csv  --output_path=test.record --image_dir=images/test")
+        os.system("python generate_tfrecord.py --csv_input=images/test_labels.csv  --output_path=test.record --image_dir=images/test")
         #subprocess.call(['python generate_tfrecord.py', csvPath, outputPath, imagePath])
         os.chdir('../') 
     def help_generatetfrecord(self):

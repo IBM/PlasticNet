@@ -31,6 +31,7 @@ def download_checkpoint(model):
 
   os.remove(model)
 
+
 if __name__ == '__main__':
   print(sys.argv[1])
   download_checkpoint(sys.argv[1])

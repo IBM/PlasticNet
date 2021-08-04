@@ -21,7 +21,6 @@ os.system("pip install -r requirements.txt")
 # Clone the tensorflow/models respository
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
-
 # Clone the PlasticNet YOLOv4 Darknet Forked Repository
 if not os.path.isdir(os.path.join(current_dir, "darknet")): 
     os.system("git clone https://github.com/mattokc35/darknet.git")
@@ -58,12 +57,18 @@ if (os_name == 'Darwin'): #Mac
     os.system('mkdir -p ~/bin')
     os.system('cp PlasticNet ~/bin')
 
+    current_dir = os.path.dirname(os.path.abspath(__file__))
     ### WORKING FOR MACOS
     file_read = open(os.path.expanduser("~") + '/.zshrc', 'r+')
     readfile = file_read.read()
     if not 'PATH=$PATH":$HOME/bin"' in readfile:
         file = open(os.path.expanduser("~") + '/.zshrc', 'a')
         file.write('\nexport PATH=$PATH\":$HOME/bin\"')
+        file.write('\nexport PYTHONPATH=$PYTHONPATH:' + os.path.join(current_dir, "models"))
+        file.write('\nexport PYTHONPATH=$PYTHONPATH:' + os.path.join(current_dir, "models/research"))
+        file.write('\nexport PYTHONPATH=$PYTHONPATH:' + os.path.join(current_dir, "models/research/sli"))
+        file.write('\nexport PLASTICNET_PATH=' + current_dir)
+        file.close()
 
     print("********************************")
     print("SUCCESS!!!!!")
@@ -73,5 +78,5 @@ if (os_name == 'Darwin'): #Mac
 if (os_name != 'Darwin'):
     print("********************************")
     print("SUCCESS!!!!!")
-    print("Dependencies installed. Please run python PlasticNet.py to use the CLI.")
+    print("Dependencies installed. Please follow the documentation on what scripts you need to run to use the project.")
     print("********************************")
