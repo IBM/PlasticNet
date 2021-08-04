@@ -63,20 +63,32 @@ class MyPrompt(Cmd):
         args = args.split()
         model = ""
         num_classes = -1
-        if (len(args) == 2):
-            model = args[0]
-            num_classes = args[1]
+        if (len(args) == 3):
+            #yolo or tf
+            mode = args[0]
+            model = args[1]
+            num_classes = args[2]
             print("PREPARING TRAINING FOR MODEL: " + str(model))
-        elif (len(args) == 1):
-            model = args[0]
+        elif (len(args) == 2):
+            mode = args[0]
+            model = args[1]
             num_classes = 9 # default
             print("PREPARING TRAINING FOR MODEL: " + str(model))
         else:
             print("ERROR: Invalid syntax. Use help prepare_training for help.")
             return
-        return_code = os.system("python " + str(self.currentPath) + "/" + "prepare_training.py --model_name " + str(model) + " --num_classes " + str(num_classes))
+
+        if mode == 't':
+            return_code = os.system("python " + str(self.currentPath) + "/" + "prepare_training.py --arch_type " + str(mode) + " --model_name " + str(model) + " --num_classes " + str(num_classes))
+        elif mode == 'y':
+            print(self.currentPath)
+            return_code = os.system("python " + str(self.currentPath) + "/" + "prepare_training.py --arch_type " + str(mode) + " --yolo_weights " + str(model) + " --num_classes " + str(num_classes))
+            weightsString = model.replace('weights', '.weights')
+            os.system("cp out/" + str(weightsString) + " " + str(self.currentPath) + "/darknet")
+            os.system("rm out/" + str(weightsString))
+
         if return_code == 0: # successful
-            self.currentModel = args[0]
+            self.currentModel = args[1]
             print(self.currentModel)
         else:
             print("ERROR: Prepare training has failed. Check the name of the model you've specified.")
@@ -84,8 +96,8 @@ class MyPrompt(Cmd):
         """
         Help Function
         """
-        print("syntax: prepare_training [model_name] [OPTIONAL: num_classes]")
-        print("generates all the necessary files for training to begin. After this is complete, run train_model")
+        print("syntax: prepare_training [model_type (YOLOv4 (y) or Tensorflow (t))][model_name (tf) or yolo_weights (y)] [OPTIONAL: num_classes]")
+        print("generates all the necessary files for training to begin (for Tensorflow). For YOLOv4, downloads the specified pre-trained weights from PlasticNet Model Zoo. After this is complete, run train_model")
 
 
     def do_train_model(self, args):
