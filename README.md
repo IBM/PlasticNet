@@ -13,7 +13,7 @@ The **Goals** for our project are listed below as the following:
 * To provide a set of pretrained **PlasticNet** models that can be utilized for future development and improvement via transfer learning
 * Implement our models to work on real-time satellite and camera footage
 
-## Project Architecture & Description
+## Basic Project Structure and Technologies Used (feat. diagram)
 
 ![img](/img/plasticnetdiagram.png)
 
