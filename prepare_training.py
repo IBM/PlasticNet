@@ -18,10 +18,12 @@ import json
 from download_training import download_checkpoint
 from override_pipeline import override_pipeline
 from absl import app, flags
+import subprocess
 
 flags.DEFINE_string('arch_type', None, 'Darknet YOLO (y) or Tensorflow (t)')
 flags.DEFINE_string('yolo_weights', None, 'name of weights file')
 flags.DEFINE_string('model_name', None, 'Title of model')
+flags.DEFINE_string('model_config_name', None, 'Model config name')
 flags.DEFINE_integer('num_classes', None, "Number of classes")
 
 FLAGS = flags.FLAGS
@@ -31,7 +33,6 @@ def main(argv):
   Downloads and overrides the pipeline.config file distributed with any base PlasticNet models.
   Any image augmentation parameters will have to be changed manually within training/pipeline.config
   """
-
   #select YOLOv4 or tensorflow
   archType = FLAGS.arch_type
   yoloWeights = FLAGS.yolo_weights
@@ -58,7 +59,5 @@ def main(argv):
   elif archType == 'y':
     print('yolo')
     download_checkpoint(yoloWeights)
-
-  
 if __name__ == '__main__':
   app.run(main)
