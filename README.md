@@ -25,7 +25,7 @@ YOLOv4 9 class v3 PlasticNet Demo (**best YOLO model**, with face masks and fish
 
 (Click to watch)
 
-[![PlasticNet Demo](https://i.ytimg.com/vi/eQRkLSfv8CY/maxresdefault.jpg)](https://youtu.be/eQRkLSfv8CY "YOLO PlasticNet Demo")
+[![PlasticNet Demo](https://img.youtube.com/vi/eQRkLSfv8CY/0.jpg)](https://youtu.be/eQRkLSfv8CY "YOLO PlasticNet Demo")
 
 Tensorflow Faster RCNN v3 7 class PlasticNet Transfer Learning Demo:
 
