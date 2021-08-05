@@ -63,6 +63,13 @@
                  ‘total_loss’: 0.4465
 
 ### YOLO Models
+
+* **Best YOLO Model** [PlasticNet YOLO 9 Classes 480x480 v2](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/yolo9class448x448v3weights.tar.gz)
+
+   Model File Name: yolo9class448x448v3weights
+
+   Average Loss: 2.33
+   
 * [PlasticNet YOLO 9 Classes 480x480 v2](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/yolo9classv2iter27000weights.tar.gz)
 
    Model File Name: yolo9classv2iter27000weights
