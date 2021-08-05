@@ -21,12 +21,16 @@ The PlasticNet command line program combines YOLOv4 and Tensorflow Object Detect
 
 ## Demo of Object Detection
 
-YOLOv4 9 class v2 PlasticNet Demo:
+YOLOv4 9 class v3 PlasticNet Demo (**best YOLO model**, with face masks and fishing nets included):
+
 (Click to watch)
-[![PlasticNet Demo](https://i.ytimg.com/vi/hLthFjLxw9s/maxresdefault.jpg)](https://youtu.be/hLthFjLxw9s "YOLO PlasticNet Demo")
+
+[![PlasticNet Demo](https://i.ytimg.com/vi/eQRkLSfv8CY/maxresdefault.jpg)](https://youtu.be/eQRkLSfv8CY "YOLO PlasticNet Demo")
 
 Tensorflow Faster RCNN v3 7 class PlasticNet Transfer Learning Demo:
+
 (Click to watch)
+
 [![PlasticNet Demo](https://img.youtube.com/vi/qGlRkV5cWzQ/0.jpg)](https://youtu.be/qGlRkV5cWzQ "Tensorflow Faster-RCNN PlasticNet Demo")
 
 See our (in-progress) demo here: https://docs.google.com/presentation/d/1D04HwL_vGas8BhgN-ztyltyDpgY5WQ-SIR7O7K86HQ8/edit?usp=sharing
