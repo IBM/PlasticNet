@@ -115,7 +115,7 @@ def main(argv):
 
 
   #Provide the path to the label map file (label_map.pbtxt), change if you want your own label map
-  PATH_TO_LABELS = '../saved_models/tensorflow_7_test/label_map.pbtxt'
+  PATH_TO_LABELS = '../out/label_map.pbtxt'
   # List of the strings that is used to add correct label for each box.
   category_index = label_map_util.create_category_index_from_labelmap(PATH_TO_LABELS, use_display_name=True)
 

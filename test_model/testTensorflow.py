@@ -75,7 +75,7 @@ def main(argv):
   PATH_TO_MODEL_DIR = '../out/' + str(trained_model) + '/exported_model/saved_model'
 
   #Provide the path to the label map file (label_map.pbtxt), change if you want your own label map
-  PATH_TO_LABELS = '../saved_models/tensorflow_7_test/label_map.pbtxt'
+  PATH_TO_LABELS = '../out/label_map.pbtxt'
 
   # LOAD THE MODEL
   from object_detection.utils import label_map_util
