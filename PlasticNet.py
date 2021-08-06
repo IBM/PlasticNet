@@ -43,12 +43,37 @@ class MyPrompt(Cmd):
             Return:
                 None
         """
+        args = args.split()
         if (len(args) >= 1):
             self.currentModel = args[0]
         print("TRAINING YOLOV4 MODEL: " + str(self.currentModel))
         os.chdir("darknet")
         os.system('./darknet detector train data/obj.data cfg/yolo-obj.cfg ' + str(self.currentModel))
         os.chdir("../")
+    def do_darknet_export(self, args):
+        """
+        Freezes the initial layers of a model so that the final layers can be retrained
+            Parameters: 
+                model_name: name you want the conv file to be called
+            Return: 
+                None
+        """
+        args = args.split()
+        if (len(args) >= 1):
+            print("FREEZING LAYERS OF YOLO MODEL: ")
+            self.currentModel = args[0]
+            print(self.currentModel)
+            os.chdir("darknet")
+            os.system('./darknet partial cfg/yolo-obj.cfg ' + 'backup/yolo-obj_final.weights' + " " + str(self.currentModel) +'.conv.81 81')
+            os.chdir("../")    
+        else: 
+            print("Please specify the name you want the conv file to be called as an argument.")
+    def help_darknet_export(self):
+        """
+        Help Function 
+        """
+        print("syntax: darknet_export [string to name file]")
+        print("Exports a model for transfer learning")
     def help_darknet_train(self):
         """
         Help Function
@@ -136,6 +161,8 @@ class MyPrompt(Cmd):
         elif (len(args) == 2):
             mode = args[0]
             model = args[1]
+            if ('.weights' in model):
+                model = model[:-8] + '.conv.81'
             print("PREPARING TRAINING FOR MODEL: " + str(model))
         else:
             print("ERROR: Invalid syntax. Use help prepare_training for help.")
@@ -143,7 +170,6 @@ class MyPrompt(Cmd):
         if mode == 't':
             return_code = os.system("python prepare_training.py --arch_type " + str(mode) + " --model_name " + str(model) + " --num_classes " + str(num_classes))
         elif mode == 'y':
-            print(self.currentPath)
             return_code = os.system("python prepare_training.py --arch_type " + str(mode) + " --yolo_weights " + str(model) + " --num_classes " + str(num_classes))
             weightsString = model.replace('weights', '.weights')
             os.system("cp out/" + str(weightsString) + " " + str(self.currentPath) + "/darknet")
