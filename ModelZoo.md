@@ -122,33 +122,41 @@
 
    Average Loss: 1.48
 
-* [PlasticNet YOLO 4 Classes v2 416x416](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/yolo4classesupdatedweights.tar.gz)
+* **PlasticNet YOLO 4 Classes v2 416x416**
 
-   Model File Name: yolo4classesupdatedweights
-
-   Average Loss: N/A
-
-* [PlasticNet YOLO 4 Classes v1 8000 iterations 416x416](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/4class8000iteration.tar.gz)
-
-   Model File Name: 4class8000iteration
+   Conv File Name (for transfer learning, click to download): [yolo4classesupdated.conv.81](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/yolo4classesupdated.conv.81.tar.gz)
+   
+   Weights File Name (for testing, click to download): [yolo4classesupdatedweights](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/yolo4classesupdatedweights.tar.gz)
 
    Average Loss: N/A
 
-* [PlasticNet YOLO 2 Classes Image Augmentation 416x416](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/yolo2classes-imguag.tar.gz)
+* **PlasticNet YOLO 4 Classes v1 8000 iterations 416x416**
 
-   Model File Name: yolo2classes-imguag
+   Conv File Name (for transfer learning, click to download): [4class8000iteration.conv.81](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/4class8000iteration.conv.81.tar.gz)
+   
+   Weights File Name (for testing, click to download): [4class8000iteration](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/4class8000iteration.tar.gz)
 
    Average Loss: N/A
 
-* [PlasticNet YOLO 2 Classes v1 416x416](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/yolo2classes3000iterations.tar.gz)
+* **PlasticNet YOLO 2 Classes Image Augmentation 416x416**
 
-   Model File Name: yolo2classes3000iterations
+   Conv File Name (for transfer learning, click to download): [yolo2classes-imguag.conv.81](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/yolo2classes-imguag.conv.81.tar.gz)
+   
+   Weights File Name (for testing, click to download): [yolo2classes-imguagweights](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/yolo2classes-imguagweights.tar.gz)
+
+   Average Loss: N/A
+
+* **PlasticNet YOLO 2 Classes v1 416x416**
+
+   Conv File Name (for transfer learning, click to download): [yolo2classes3000iterations.conv.81](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/yolo2classes3000iterations.conv.81.tar.gz)
+   
+   Weights File Name (for testing, click to download): [yolo2classes3000iterations](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/yolo2classes3000iterations.tar.gz)
 
    Average Loss: 6.67
 
 * [Darknet YOLO 2 Classes Pre-Trained Weights](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/yolov4weights.tar.gz)
 
-   Model File Name: yolov4weights
+   Model File Name: yolov4.conv.137
 
    Average Loss: N/A
 
