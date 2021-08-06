@@ -5,6 +5,8 @@
 
    Model File Name: faster_rcnn_640x640_9classes_v1
 
+   Transfer Learning From: PlasticNet Model: faster_rcnn_640x640_7classes_v2
+
    Average Loss:
                  
                 localization_loss’: 0.16872177,
@@ -21,6 +23,9 @@
 * [PlasticNet FasterRCNN 7 Classes 640x640 v2](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/faster_rcnn_640x640_7classes_v2.tar.gz)
    
    Model File Name: faster_rcnn_640x640_7classes_v2
+
+   Transfer Learning From: PlasticNet Model: faster_rcnn_640x640_7classes_v1
+
    
    Average Loss: 
    
@@ -37,7 +42,9 @@
 * [PlasticNet FasterRCNN 7 Classes 640x640 v1](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/faster_rcnn_640x640_7classes_v1.tar.gz)
    
    Model File Name: faster_rcnn_640x640_7classes_v1
-   
+
+   Transfer Learning From: TensorFlow Base Model: Faster R-CNN ResNet101 V1 640x640
+
    Average Loss: 
    
                  classification loss is 0.006, 
@@ -51,7 +58,9 @@
 * [PlasticNet SSD-Resnet 7 Classes 640x640](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/ssd_resnet_640x640_7classes_v1.tar.gz)
 
    Model File Name: ssd_resnet_640x640_7classes_v1
-   
+
+   Transfer Learning From: TensorFlow base model: SSD ResNet152 V1 FPN 640x640 (RetinaNet152)
+
    Average Loss: 
 
                  ‘classification_loss’: 0.06852589
@@ -61,6 +70,7 @@
                  ‘regularization_loss’: 0.35246804,
 
                  ‘total_loss’: 0.4465
+
 
 ### YOLO Models
 

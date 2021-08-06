@@ -68,7 +68,7 @@ class MyPrompt(Cmd):
             if(mode == 'w'):
                 score = args[1]
                 print("Testing YOLOv4 Darknet on webcam...")
-                os.system("./darknet detector demo data/obj.data cfg/yolo-obj.cfg " + ' -thresh ' + str(score) + " -c 0"  )
+                os.system("./darknet detector demo data/obj.data cfg/yolo-obj.cfg " + str(self.currentModel) + ' -thresh ' + str(score) + " -c 0"  )
                 #webcam
             if(mode == 'v'):
                 if (len(args == 3)):
