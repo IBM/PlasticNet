@@ -74,7 +74,7 @@
 
 ### YOLO Models
 
-* **Best YOLO Model** [PlasticNet YOLO 9 Classes 448x448 v2](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/yolo9class448x448v3weights.tar.gz)
+* **Best YOLO Model** [PlasticNet YOLO 9 Classes 448x448 v3](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/yolo9class448x448v3weights.tar.gz)
 
    Model File Name: yolo9class448x448v3weights
 
