@@ -156,7 +156,7 @@
 
    Average Loss: 6.67
 
-* [Darknet YOLO 12 Classes Pre-Trained Weights](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/yolov4weights.tar.gz)
+* [Darknet YOLO 12 Classes Pre-Trained Weights](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/yolov4.conv.137.tar.gz)
 
    ***This pre-trained weights is if you want to train a new PlasticNet model from scratch using the provided Darknet generic pretrained weights from https://github.com/mattokc35/darknet, not using a pre-trained PlasticNet model!***
 
