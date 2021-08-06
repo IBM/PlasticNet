@@ -43,12 +43,32 @@ class MyPrompt(Cmd):
             Return:
                 None
         """
+        args = args.split()
         if (len(args) >= 1):
             self.currentModel = args[0]
         print("TRAINING YOLOV4 MODEL: " + str(self.currentModel))
         os.chdir("darknet")
         os.system('./darknet detector train data/obj.data cfg/yolo-obj.cfg ' + str(self.currentModel))
         os.chdir("../")
+    def do_darknet_export(self, args):
+        """
+        Freezes the initial layers of a model so that the final layers can be retrained
+            Parameters: 
+                model_name: name you want the conv file to be called
+            Return: 
+                None
+        """
+        args = args.split()
+        if (len(args) >= 1):
+            print("FREEZING LAYERS OF YOLO MODEL: ")
+            self.currentModel = args[0]
+            print(self.currentModel)
+            os.chdir("darknet")
+            os.system('./darknet partial cfg/yolo-obj.cfg ' + 'backup/yolo-obj_final.weights' + " " + str(self.currentModel) +'.conv.81 81')
+            os.chdir("../")    
+        else: 
+            print("Please specify the name you want the conv file to be called as an argument.")
+
     def help_darknet_train(self):
         """
         Help Function
