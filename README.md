@@ -87,9 +87,12 @@ After you have updated this makefile and/or the configuration file, run `make cl
 See our spreadsheet documentating our test results from different trained models here: https://docs.google.com/spreadsheets/d/1mcFC2HqjohRp2_G723D8_Xd19LuuUKD-frROiY5ksOQ/edit?usp=sharing
 
 ## Resources
-Labeling Images: https://cloud.annotations.ai/
 
-YOLO: Run locally and test with images to get familiar with it (https://pjreddie.com/darknet/yolo/)
+Forked YOLOv4 PlasticNet Darknet repository: https://github.com/mattokc35/darknet
+
+Labeling Images with IBM Cloud Annotations: https://cloud.annotations.ai/
+
+Darknet YOLO: (https://pjreddie.com/darknet/yolo/)
 
 Restoring Integrity to the Oceans (RIO): https://www.oceansintegrity.com/
 
@@ -99,7 +102,7 @@ Tensorflow Object Detection API: https://github.com/tensorflow/models/tree/maste
 
 Yolo with Tensorflow: https://github.com/theAIGuysCode/tensorflow-yolov4-tflite 
 
-Forked YOLOv4 Darknet repository: https://github.com/mattokc35/darknet
+
 
 
 
