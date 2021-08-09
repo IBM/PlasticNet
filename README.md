@@ -35,9 +35,6 @@ The PlasticNet command line program combines YOLOv4 and Tensorflow Object Detect
 
 [![PlasticNet Demo](https://img.youtube.com/vi/qGlRkV5cWzQ/0.jpg)](https://youtu.be/qGlRkV5cWzQ "Tensorflow Faster-RCNN PlasticNet Demo")
 
-See our (in-progress) demo here: https://docs.google.com/presentation/d/1D04HwL_vGas8BhgN-ztyltyDpgY5WQ-SIR7O7K86HQ8/edit?usp=sharing
-
-
 ## Get Started
 
 To get started with PlasticNet, you first must clone the repository using the following command:
