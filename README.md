@@ -3,6 +3,8 @@
 
 **PlasticNet** is an "**IBM Tech for Good**" open-source project developed by the IBM Space Tech team to build a repository of AI object detection models to classify types/brands of plastics, trash on beaches, trash in the ocean, etc. We can scale this effort with the global community of developers participating and contributing towards this noble effort, with long term goals to help with ocean cleanup and positively impact climate change.
 
+For more information on how to get started, check out the **PlasticNet Wiki** [here](https://github.com/IBM/PlasticNet/wiki)!
+
 ## Goals
 
 The **Goals** for our project are listed below as the following: 
