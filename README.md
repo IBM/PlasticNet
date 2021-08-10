@@ -17,7 +17,7 @@ The **Goals** for our project are listed below as the following:
 
 ## Basic Project Structure and Technologies Used (feat. diagram)
 
-![img](/img/plasticnetdiagram.png)
+![img](/img/PlasticNetProjectArchitectureDiagram.png)
 
 The PlasticNet command line program combines YOLOv4 and Tensorflow Object Detection API technologies into a single, easily usable machine learning pipeline CLI. Collaborators can use the PlasticNet CLI to prepare models  for training (via transfer learning from the provided pre-trained PlasticNet models), train custom detection models built upon pre-trained PlasticNet models, export the trained models, and finally test the trained models.  The CLI was created so these steps can all be done with a few simple commands, seen [here](https://github.com/IBM/PlasticNet/wiki/Utilizing-the-PlasticNet-Command-Line-Client). Initially trained via transfer learning from pre-trained YOLO weights [(found here)](https://github.com/mattokc35/darknet#pre-trained-models), and pre-trained Tensorflow models (from the [Tensorflow Detection Model Zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md)), our official **PlasticNet Model Zoo** (found [here](https://github.com/IBM/PlasticNet/blob/main/ModelZoo.md)) can be used by collaborators for the further improvement/development of new PlasticNet object detection models. For labeling images, we utilized IBM's Cloud Annotations (instructions found [here](https://github.com/IBM/PlasticNet/wiki/Creating-Your-Own-Dataset-for-Custom-Training)).
 
