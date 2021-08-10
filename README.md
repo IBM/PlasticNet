@@ -43,6 +43,8 @@ To get started with PlasticNet, you first must clone the repository using the fo
 git clone https://github.com/IBM/PlasticNet.git
 ```
 
+For more detailed instructions on how to get started, check out the **PlasticNet Wiki** [here](https://github.com/IBM/PlasticNet/wiki)!
+
 Once the repository is cloned, you can run the following command in the python evironment of your choice. (NOTE: It is recommended that this is done in a new python environment, to avoid any issues between package dependencies)
 
 The setup script currently only supports MacOS, but Windows and Linux support will be added soon.
