@@ -4,6 +4,7 @@
 
 ### TensorFlow Models
 * [PlasticNet EfficientDET D1 **9 classes**640x640](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/efficientdet_d1_640x640_9classes_v2.tar.gz)
+
    Model File Name: efficientdet_d1_640x640_9classes_v2
 
    Transfer Learning From: TensorFlow efficientdet_d1
