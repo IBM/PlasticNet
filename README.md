@@ -33,7 +33,7 @@ The PlasticNet command line program combines YOLOv4 and Tensorflow Object Detect
 
 *(Click to watch)*
 
-[![PlasticNet Demo](https://img.youtube.com/vi/jWkY30oC7Rw/0.jpg)](https://youtu.be/jWkY3OoC7Rw "Tensorflow EfficientDET D1 PlasticNet Demo")
+[![PlasticNet Demo](https://img.youtube.com/vi/jWkY3OoC7Rw/0.jpg)](https://youtu.be/jWkY3OoC7Rw "Tensorflow EfficientDET D1 PlasticNet Demo")
 
 ## Get Started
 
