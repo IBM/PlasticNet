@@ -3,6 +3,21 @@
 **For pre-trained weights to train a PlasticNet model from scratch, see the bottom of this page!**
 
 ### TensorFlow Models
+* [PlasticNet EfficientDET D1 **9 classes**640x640](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/efficientdet_d1_640x640_9classes_v2.tar.gz)
+   Model File Name: efficientdet_d1_640x640_9classes_v2
+
+   Transfer Learning From: TensorFlow efficientdet_d1
+
+   Average Loss: 
+
+                class_loss: 0.08758,
+
+                localization_loss: 7.339e-4,
+
+                regularization_loss: 0.08055,  
+
+                total_loss: 0.1686
+
 * [PlasticNet Faster-RCNN **9 classes** 640x640](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/faster_rcnn_640x640_9classes_v1.tar.gz)
 
    Model File Name: faster_rcnn_640x640_9classes_v1
