@@ -1,4 +1,4 @@
-## PlasticNet Model Metrics 
+## PlasticNet Model Zoo
 
 **For pre-trained weights to train a PlasticNet model from scratch, see the bottom of this page!**
 
