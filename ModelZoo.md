@@ -108,7 +108,7 @@
    
    Weights File Name (for testing, click to download): [yolo9class448x448v4weights](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/yolo9class448x448v4weights.tar.gz)
 
-   Average Loss: 2.33
+   Average Loss: 2.32
    
 * **PlasticNet YOLO 9 Classes 480x480 v2**
 
