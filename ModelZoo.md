@@ -100,6 +100,16 @@
 
    Average Loss: 2.33
    
+* **PlasticNet YOLO 9 Classes 448x448 v4**
+
+   Transfer Learning Base Model: PlasticNet YOLO 9 Classes 448x448 ([yolo9class448x448v3.conv.81](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/yolo9class448x448v3.conv.81.tar.gz))
+
+   Conv File Name (for transfer learning, click to download): [yolo9class448x448v4.conv.81](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/yolo9class448x448v4.conv.81.tar.gz)
+   
+   Weights File Name (for testing, click to download): [yolo9class448x448v4weights](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/yolo9class448x448v4weights.tar.gz)
+
+   Average Loss: 2.33
+   
 * **PlasticNet YOLO 9 Classes 480x480 v2**
 
     Conv File Name (for transfer learning, click to download): [yolo9classv2iter27000.conv.81](https://plasticnet-models.s3.us.cloud-object-storage.appdomain.cloud/yolo9classv2iter27000.conv.81.tar.gz)
