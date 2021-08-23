@@ -28,6 +28,6 @@ For a more thorough introduction see our [blog post](https://www.ibm.com/cloud/b
 ![img](pwf.png) The [Pacific Whale Foundation](https://www.pacificwhale.org) has provided thousands of image examples of trash and debris that has been found in the Pacific Ocean.
 
 
-# Extending and Contributing
+# Get Involved
 
 We invite you to checkout the project on [GitHub](https://github.com/IBM/PlasticNet) and the [wiki](https://github.com/IBM/PlasticNet/wiki) to see you can use, extend, and contribute back to the PlasticNet project.
